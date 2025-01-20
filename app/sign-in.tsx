@@ -12,7 +12,6 @@ import icons from "@/constants/icons";
 
 const signIn = () => {
   const handleLogin = () => {
-    console.log("login");
   };
   return (
     <SafeAreaView className="bg-white h-full">
