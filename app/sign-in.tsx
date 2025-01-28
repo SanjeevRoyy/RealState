@@ -15,16 +15,14 @@ import { useGlobalContext } from "@/lib/global-provider";
 import { Redirect } from "expo-router";
 
 const signIn = () => {
-  // const { refetch, loading, isLogged } = useGlobalContext();
+  const { refetch, loading, isLogged } = useGlobalContext();
 
-  // if (!loading && !isLogged) return <Redirect href="/" />;
+  if (!loading && isLogged) return <Redirect href="/" />;
 
   const handleLogin = async () => {
     const result = await Login();
     if (result) {
-      // refetch();
-      console.log("login sucess matherchod")
-      Alert.alert("Logged in sucess sanjeev");
+      refetch();
     } else {
       Alert.alert("Error", "Login failed");
     }
