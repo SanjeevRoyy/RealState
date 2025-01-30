@@ -36,7 +36,7 @@ export const GlobalProvider = ({ children }: GlobalProviderProps) => {
   return (
     <GlobalContext.Provider
       //@ts-ignore
-      value={{ isLogged, user, loading, efetch }}
+      value={{ isLogged, user, loading, refetch }}
     >
       {children}
     </GlobalContext.Provider>

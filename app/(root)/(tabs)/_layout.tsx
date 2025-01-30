@@ -19,6 +19,7 @@ const TabIcon = ({
       className="size-6"
       resizeMode="contain"
     />
+
     <Text
       className={`${
         focused
@@ -28,6 +29,7 @@ const TabIcon = ({
     >
       {title}
     </Text>
+    
   </View>
 );
 

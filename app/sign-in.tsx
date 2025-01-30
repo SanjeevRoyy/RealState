@@ -36,15 +36,11 @@ const signIn = () => {
           resizeMode="contain"
         />
         <View className="px-10">
-
           <Text className="text-base text-center uppercase font-rubik text-black-200  ">
             Welcome to Real State
           </Text>
-
           <Text className="text-3xl font-rubik-bold text-black-300 text-center mt-2">
-           <Text>
             Let's Go Closer to {"\n"}
-            </Text> 
             <Text className="text-primary-300">Your Ideal Home</Text>
           </Text>
           <Text className="text-lg font-rubik text-black-200 text-center mt-12">
@@ -60,11 +56,9 @@ const signIn = () => {
                 className="w-5 h-5 "
                 resizeMode="contain"
               />
-
               <Text className="text-lg font-rubik-medium text-black-300 ml-2">
                 Continue with Google
               </Text>
-              
             </View>
           </TouchableOpacity>
         </View>
