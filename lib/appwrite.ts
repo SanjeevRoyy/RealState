@@ -129,9 +129,8 @@ export async function getProperties({
         Query.search("type", query)
       );
     }
-    if (limit) {
-      buildQuery.push(Query.limit(limit));
-    }
+    if (limit) buildQuery.push(Query.limit(limit));
+
     const result = await databases.listDocuments(
       config.databaseId!,
       config.propertiesCollectionId!,
@@ -140,5 +139,6 @@ export async function getProperties({
     return result.documents;
   } catch (error) {
     console.log(error);
+    return [];
   }
 }
