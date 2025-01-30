@@ -3,16 +3,13 @@ import Filters from "@/components/Filters";
 import NoResults from "@/components/NoResults";
 import Search from "@/components/Search";
 import icons from "@/constants/icons";
-import images from "@/constants/images";
 import { getLatestProperties, getProperties } from "@/lib/appwrite";
 import { useGlobalContext } from "@/lib/global-provider";
-import seed from "@/lib/seed";
 import { useAppwrite } from "@/lib/useAppwrite";
 import { Link, router, useLocalSearchParams } from "expo-router";
 import { useEffect } from "react";
 import {
   ActivityIndicator,
-  Button,
   FlatList,
   Image,
   Text,
@@ -43,7 +40,7 @@ export default function Index() {
     skip: true,
   });
 
-  // const handleCardPress = (id: string) => router.push(`/property/${id}`);
+  const handleCardPress = (id: string) => router.push(`/properties/${id}`);
 
   useEffect(() => {
     refetch({
@@ -60,7 +57,7 @@ export default function Index() {
         renderItem={({ item }) => (
           <Card
             item={item}
-            // onPress={handleCardPress(item.$id)}
+            onPress={()=>handleCardPress(item.$id)}
           />
         )}
         keyExtractor={(item) => item.$id}
@@ -117,7 +114,7 @@ export default function Index() {
                   renderItem={({ item }) => (
                     <FeaturedCards
                       item={item}
-                      // onPress={handleCardPress(item.$id)}
+                      onPress={()=>handleCardPress(item.$id)}
                     />
                   )}
                   keyExtractor={(item) => item.$id}
