@@ -1,12 +1,14 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import { View, Text } from "react-native";
+import React from "react";
+import { useLocalSearchParams } from "expo-router";
 
 const Property = () => {
+  const { id } = useLocalSearchParams();
   return (
     <View>
-      <Text>Properties</Text>
+      <Text>Properties{id}</Text>
     </View>
-  )
-}
+  );
+};
 
-export default Property
+export default Property;

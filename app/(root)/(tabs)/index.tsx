@@ -42,7 +42,6 @@ export default function Index() {
     },
     skip: true,
   });
-  console.log(latestProperties);
 
   // const handleCardPress = (id: string) => router.push(`/property/${id}`);
 
